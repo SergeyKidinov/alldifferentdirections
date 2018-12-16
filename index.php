@@ -16,44 +16,6 @@ spl_autoload_register(function ($class) use ($mapping) {
     }
 }, true);
 
-
-$obg1 = new StdClass();
-#$obg1 = new ArrayObject(); // SPL
-$obg1->test1 = 'test1';
-$obg1->test2 = 'test2';
-$obg1->test3 = 'test3';
-
-$obg2 = clone $obg1;
-
-$obg1->test4 = 'test4';
-echo '<pre>';
-print_r($obg2);
-
-#$x = include __DIR__ . '/App/Navigator.class.php';
-#$foo = include '../data.php';
-#echo '<pre>12'; print_r($foo);
-
-$arr = [
-    0 => ['test0','test0'],
-    1 => ['test1',],
-    /*2 => 'test2',
-    3 => 'test3'*/
-];
-foreach ($arr as &$val) {
-    $val[] = 'afafff';
-
-}
-
-echo '<pre>'; print_r($arr);
-
-function arr1($a, $b , $c){
-    /*$args = func_get_args();
-    var_export($args);*/
-    echo $a ." - ". $b ." - ". $c;
-}
-
-arr1(...[1,2,3,4]);
-
 ?>
 <html>
 <head>
